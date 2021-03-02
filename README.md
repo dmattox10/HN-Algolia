@@ -18,7 +18,7 @@ Reactstrap - Bootstrap wrapped in React components, I used the "Lumen" theme fro
 **Redux!** - Ever since I discovered context API, I haven't touched Redux, and so much has changed. Much less boilerplate code than before, easier to follow reading through it.
 
 #### Noteworthy
-I usually use the package "Express Brute" to prevent abuse of the services I create, but since this is Front End only, I created a simple captcha type deal with that possibility.
+I usually use the package "Express Brute" to prevent abuse of the services I create, but since this is Front End only, I created a simple captcha type hack to deal with that possibility.
 
 ### Screenshot
 <div><img src="screenshot1.png" style="width: 100%"/></div>
