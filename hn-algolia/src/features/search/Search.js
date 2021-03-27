@@ -2,10 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { prevQueries, searchResults, submitSearch, save } from './searchSlice';
 
+
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { Container, Row, Col, Form, FormGroup, Label, Input, Button } from 'reactstrap';
 import { unwrapResult } from '@reduxjs/toolkit';
+
+import { Results } from './Results'
 
 export const Search = () => {
     const queries = useSelector(prevQueries);
@@ -33,6 +36,7 @@ export const Search = () => {
             query: '',
             botCheck: '',
             botCode: generateBotCode(8),
+            date: false,
         },
         validationSchema: Yup.object({
             query: Yup.string().required('Please enter something to search for.'),
@@ -47,7 +51,7 @@ export const Search = () => {
             )
         }),
         onSubmit: values => {
-            if (canSave) {
+            if (canSearch) {
                 try {
                     setSearchStatus('pending');
                     const resultAction = dispatch(
@@ -62,12 +66,12 @@ export const Search = () => {
                 }
             }
             
-            dispatch(save(values.query));
-            dispatch(submitSearch(values.query));
+            dispatch(save(values));
+            dispatch(submitSearch(values));
         }
     })
 
-    const canSave = [formik.values.query, formik.values.botCheck].every(Boolean) && SearchStatus === 'idle'
+    const canSearch = [formik.values.query, formik.values.botCheck].every(Boolean) && SearchStatus === 'idle'
 
     return (
         <Container>
@@ -120,6 +124,7 @@ export const Search = () => {
                     </Col>
                 </Row>
             </Form>
+            { results ? <Results /> : null }
         </Container>
     );
 }

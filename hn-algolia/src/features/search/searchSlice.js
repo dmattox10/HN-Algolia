@@ -10,9 +10,9 @@ const initialState = {
 }
 
 export const submitSearch = createAsyncThunk('search/submitQuery', async action => {
-    const response = await client.post(baseURL, action.payload + '/')
+    const response = await client.get(`${baseURL}${action.query}/`)
     return response // TODO Shape this!
-});
+})
 
 export const searchSlice = createSlice({
     name: 'search',
@@ -38,13 +38,13 @@ export const searchSlice = createSlice({
             state.error = action.payload
         }
     }
-});
+})
 
-export const { submit, save } = searchSlice.actions;
+export const { submit, save } = searchSlice.actions
 
-export const prevQueries = state => state.search.queries;
-export const searchResults = state => state.search.results;
-export const searchStatus = state => state.search.status;
-export const error = state => state.search.error;
+export const prevQueries = state => state.search.queries
+export const searchResults = state => state.search.results
+export const searchStatus = state => state.search.status
+export const error = state => state.search.error
 
-export default searchSlice.reducer;
+export default searchSlice.reducer

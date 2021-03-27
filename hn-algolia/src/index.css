@@ -1,13 +1,112 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.loader .container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.loader .row {
+  display: flex;
+  justify-content: center;
+}
+
+.triangle {
+  margin: 0 -7.5px 0 -7.5px;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 25.98px solid;
+  border-bottom-color: #66ff33;
+  animation-name: pulse;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  filter: drop-shadow(0 0 22.5px #66ff33);
+}
+.triangle.down {
+  transform: rotate(180deg);
+}
+.triangle.outer-1 {
+  animation-delay: -0.0555555556s;
+}
+.triangle.outer-2 {
+  animation-delay: -0.1111111111s;
+}
+.triangle.outer-3 {
+  animation-delay: -0.1666666667s;
+}
+.triangle.outer-4 {
+  animation-delay: -0.2222222222s;
+}
+.triangle.outer-5 {
+  animation-delay: -0.2777777778s;
+}
+.triangle.outer-6 {
+  animation-delay: -0.3333333333s;
+}
+.triangle.outer-7 {
+  animation-delay: -0.3888888889s;
+}
+.triangle.outer-8 {
+  animation-delay: -0.4444444444s;
+}
+.triangle.outer-9 {
+  animation-delay: -0.5s;
+}
+.triangle.outer-10 {
+  animation-delay: -0.5555555556s;
+}
+.triangle.outer-11 {
+  animation-delay: -0.6111111111s;
+}
+.triangle.outer-12 {
+  animation-delay: -0.6666666667s;
+}
+.triangle.outer-13 {
+  animation-delay: -0.7222222222s;
+}
+.triangle.outer-14 {
+  animation-delay: -0.7777777778s;
+}
+.triangle.outer-15 {
+  animation-delay: -0.8333333333s;
+}
+.triangle.outer-16 {
+  animation-delay: -0.8888888889s;
+}
+.triangle.outer-17 {
+  animation-delay: -0.9444444444s;
+}
+.triangle.outer-18 {
+  animation-delay: -1s;
+}
+.triangle.inner-1 {
+  animation-delay: -0.1666666667s;
+}
+.triangle.inner-2 {
+  animation-delay: -0.3333333333s;
+}
+.triangle.inner-3 {
+  animation-delay: -0.5s;
+}
+.triangle.inner-4 {
+  animation-delay: -0.6666666667s;
+}
+.triangle.inner-5 {
+  animation-delay: -0.8333333333s;
+}
+.triangle.inner-6 {
+  animation-delay: -1s;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.1;
+  }
+  33% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.1;
+  }
 }
