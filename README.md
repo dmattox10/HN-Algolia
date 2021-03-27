@@ -1,10 +1,24 @@
-# HN-Algolia
+# HN-Algolia (Success!)
 At-home exercise for RTS-Labs to demonstrate the ability to pick up an unfamiliar element and integrate it into a project.
 
-## About this project
+## About this project- Day 2!
+Thanks to the guidance from the engineers, I was able to connect to and search the HN-Algolia API! I added several components:
+- Loader: a really cool spinner, CSS recreation of the loading spinner from Elite: Dangerous, that I found long ago and adapted for React
+- Error: nicely displays error messages sent by the API (if any)
+- Entry: I have plans for this one but it's the title, text, and URL if any of the search result
+
+### The Good
+It works, run yarn, yarn start, and it's usable!
+
+### The Bad
+Building with docker and deploying, the CORS error resurfaces!!
+I'd love to figure that out shortly, I'm out of time for today (Saturday).
+
+## About this project (updated)
 I was unable to finish due to CORS issues that I spent the entire day trying to get around without building an express server to proxy the requests, maybe I was supposed to.... I can say for certain, that I know how to deal with CORS when I have access to both the Front End and the Server. I have written and used plenty of REST API's.
-My next steps would have been to build a posts component to display each entry in a meaningful way, and then map the data onto the post component x times.
-After that I was going to include a tag cloud of the previous searches, clicking one would repeat the search.
+
+- [X] My next steps would have been to build a posts component to display each entry in a meaningful way, and then map the data onto the post component x times.
+- [] After that I was going to include a tag cloud of the previous searches, clicking one would repeat the search.
 
 ### Front End
 React - My goto.
@@ -20,7 +34,8 @@ Reactstrap - Bootstrap wrapped in React components, I used the "Lumen" theme fro
 #### Noteworthy
 I usually use the package "Express Brute" to prevent abuse of the services I create, but since this is Front End only, I created a simple captcha type hack to deal with that possibility.
 
-### Screenshot
+### Screenshots
+<div><img src="day2.png" style="width: 100%" /></div>
 <div><img src="screenshot1.png" style="width: 100%"/></div>
 
 This project is hosted on my private server [HERE CLICK ME!](https://hna.danielmattox.com)
