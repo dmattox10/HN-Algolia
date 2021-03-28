@@ -10,7 +10,9 @@ const initialState = {
 }
 
 export const submitSearch = createAsyncThunk('search/submitQuery', async action => {
-    const response = await client.get(`${baseURL}${action.query}/`)
+    console.log(encodeURIComponent(action.query.trim()))
+    console.log(`${baseURL}${encodeURIComponent(action.query.trim())}`)
+    const response = await client.get(`${baseURL}${encodeURIComponent(action.query.trim())}`)
     return response // TODO Shape this!
 })
 
