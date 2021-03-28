@@ -1,7 +1,13 @@
-# HN-Algolia (Success!)
+# HN-Algolia (Success!!!!!!)
 At-home exercise for RTS-Labs to demonstrate the ability to pick up an unfamiliar element and integrate it into a project.
 
-## About this project- Day 2!
+## About this project - Day 3!
+- Completed using the previous queries in Redux State to create buttons which when clicked submit the previous search
+- Edited Entry component to include a link to the story if it exists
+- Edited the loading spinner to match the hackernews color
+- Left room to easily add checkbox to search by date instead of relevance, all other features supporting.
+
+## About this project - Day 2!
 Thanks to the guidance from the engineers, I was able to connect to and search the HN-Algolia API! I added several components:
 - Loader: a really cool spinner, CSS recreation of the loading spinner from Elite: Dangerous, that I found long ago and adapted for React
 - Error: nicely displays error messages sent by the API (if any)
@@ -10,15 +16,16 @@ Thanks to the guidance from the engineers, I was able to connect to and search t
 ### The Good
 It works, run yarn, yarn start, and it's usable!
 
-### The Bad
-Building with docker and deploying, the CORS error resurfaces!!
-I'd love to figure that out shortly, I'm out of time for today (Saturday).
+### The Bad (Fixed!)
+~~Building with docker and deploying, the CORS error resurfaces!!~~
+- [X] I'd love to figure that out shortly, I'm out of time for today (Saturday).
 
 ## About this project (updated)
 I was unable to finish due to CORS issues that I spent the entire day trying to get around without building an express server to proxy the requests, maybe I was supposed to.... I can say for certain, that I know how to deal with CORS when I have access to both the Front End and the Server. I have written and used plenty of REST API's.
 
 - [X] My next steps would have been to build a posts component to display each entry in a meaningful way, and then map the data onto the post component x times.
-- [] After that I was going to include a tag cloud of the previous searches, clicking one would repeat the search.
+
+- [X] After that I was going to include a tag cloud of the previous searches, clicking one would repeat the search.
 
 ### Front End
 React - My goto.

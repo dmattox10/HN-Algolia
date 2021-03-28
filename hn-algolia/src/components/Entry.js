@@ -1,4 +1,4 @@
-import { ListGroupItemHeading, ListGroupItemText, ListGroupItem, NavLink } from 'reactstrap'
+import { ListGroupItemHeading, ListGroupItemText, ListGroupItem } from 'reactstrap'
 
 export const Entry = props => {
     const { title, story_text, url } = props.data
@@ -6,7 +6,7 @@ export const Entry = props => {
         <ListGroupItem>
             <ListGroupItemHeading>{ title }</ListGroupItemHeading>
             <ListGroupItemText>{ story_text }</ListGroupItemText>
-            {url ? <NavLink to={url} /> : null}
+            {url ? <a href={url}>Read More</a> : null}
         </ListGroupItem>
     )
 }
