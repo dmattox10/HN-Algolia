@@ -1,5 +1,6 @@
 # HN-Algolia (Success!!!!!!)
 At-home exercise for RTS-Labs to demonstrate the ability to pick up an unfamiliar element and integrate it into a project.
+Builds into a working docker container, Running on my home server.
 
 ## About this project - Day 3!
 - Completed using the previous queries in Redux State to create buttons which when clicked submit the previous search
