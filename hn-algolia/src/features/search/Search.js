@@ -55,23 +55,36 @@ export const Search = () => {
                 try {
                     setSearchStatus('pending');
                     const resultAction = dispatch(
-                        submitSearch(values.query)
+                        submitSearch(values)
                     )
                     unwrapResult(resultAction);
                 } catch (err) {
                     console.error('Failed to submit: ', err);
                 } finally {
-                    dispatch(save(values.query));
+                    dispatch(save(values))
                     setSearchStatus('idle')
                 }
             }
-            
-            dispatch(save(values));
-            dispatch(submitSearch(values));
         }
     })
 
-    const canSearch = [formik.values.query, formik.values.botCheck].every(Boolean) && SearchStatus === 'idle'
+    const submitPrevious = query => {
+        let values = {} // This is here because I want to include sorting by date
+        values.query = query
+        try {
+            setSearchStatus('pending')
+            const resultAction = dispatch(
+                submitSearch(values)
+            )
+            unwrapResult(resultAction)
+        } catch (err) {
+            console.error('Failed to submit: ', err)
+        } finally {
+            setSearchStatus('idle')
+        }
+    }
+
+    const canSearch = [formik.values.query, formik.values.botCheck].every(Boolean)
 
     return (
         <Container>
@@ -125,6 +138,7 @@ export const Search = () => {
                 </Row>
             </Form>
             { results ? <Results /> : null }
+            { queries ? queries.map(query => <Button onClick={ () => submitPrevious(query)}>{query}</Button>) : null }
         </Container>
     );
 }

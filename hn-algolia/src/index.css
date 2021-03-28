@@ -17,11 +17,11 @@
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
   border-bottom: 25.98px solid;
-  border-bottom-color: #66ff33;
+  border-bottom-color: #f60;
   animation-name: pulse;
   animation-duration: 1s;
   animation-iteration-count: infinite;
-  filter: drop-shadow(0 0 22.5px #66ff33);
+  filter: drop-shadow(0 0 22.5px #f60);
 }
 .triangle.down {
   transform: rotate(180deg);

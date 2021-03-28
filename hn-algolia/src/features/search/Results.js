@@ -9,7 +9,6 @@ import { Entry } from '../../components/Entry'
 import { Error } from '../../components/Error'
 
 export const Results = () => {
-    const dispatch = useDispatch()
     const results = useSelector(searchResults)
 
     const searchStatus = useSelector(state => state.search.status)

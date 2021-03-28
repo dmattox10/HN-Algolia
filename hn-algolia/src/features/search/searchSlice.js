@@ -21,7 +21,7 @@ export const searchSlice = createSlice({
         save: (state, action) => {
             return {
                 ...state.queries,
-                queries: [...state.queries, action.payload] 
+                queries: state.queries.concat(action.payload.query)
             }
         },
     },
@@ -40,7 +40,7 @@ export const searchSlice = createSlice({
     }
 })
 
-export const { submit, save } = searchSlice.actions
+export const { save } = searchSlice.actions
 
 export const prevQueries = state => state.search.queries
 export const searchResults = state => state.search.results
