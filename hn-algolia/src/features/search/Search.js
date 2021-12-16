@@ -90,7 +90,7 @@ export const Search = () => {
         <Container>
             <div className='spacer'></div>
             <div className='center'>
-                <h2>Search Hacker News via Algolia</h2>
+                <h2>Search Hacker News via Algolia AI</h2>
             </div>
             <Form onSubmit={formik.handleSubmit}>
                 <Row>
