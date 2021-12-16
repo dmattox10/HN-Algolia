@@ -1,4 +1,6 @@
 # HN-Algolia (Success!!!!!!)
+Despite not being chosen for the role, this React project showcases my ability to quickly jump from using ContextAPI to Redux which I had not touched in nearly a year. The Algolia AI API is accessed by this front end project.
+
 At-home exercise for RTS-Labs to demonstrate the ability to pick up an unfamiliar element and integrate it into a project.
 Builds into a working docker container, Running on my home server.
 
@@ -22,11 +24,10 @@ It works, run yarn, yarn start, and it's usable!
 - [X] I'd love to figure that out shortly, I'm out of time for today (Saturday).
 
 ## About this project (updated)
-I was unable to finish due to CORS issues that I spent the entire day trying to get around without building an express server to proxy the requests, maybe I was supposed to.... I can say for certain, that I know how to deal with CORS when I have access to both the Front End and the Server. I have written and used plenty of REST API's.
 
 - [X] My next steps would have been to build a posts component to display each entry in a meaningful way, and then map the data onto the post component x times.
 
-- [X] After that I was going to include a tag cloud of the previous searches, clicking one would repeat the search.
+- [] After that I was going to include a tag cloud of the previous searches, clicking one would repeat the search.
 
 ### Front End
 React - My goto.
@@ -46,5 +47,5 @@ I usually use the package "Express Brute" to prevent abuse of the services I cre
 <div><img src="day2.png" style="width: 100%" /></div>
 <div><img src="screenshot1.png" style="width: 100%"/></div>
 
-This project is hosted on my private server [HERE CLICK ME!](https://hna.danielmattox.com)
+This project is hosted on my private server [HERE CLICK ME!](https://hn.danielmattox.com)
 
